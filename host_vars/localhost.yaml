@@ -1,0 +1,16 @@
+terraform:
+  production:
+    vmss_admin_username: "{{ user }}"
+    vmss_admin_password: "{{ pass }}"
+    location: "{{ reg }}"
+    environment: "staging"
+    vmss_instances: "{{ ins }}"
+    machine_type: "{{ mach }}"
+
+  staging:
+    vmss_admin_username: "{{ user }}"
+    vmss_admin_password: "{{ pass }}"
+    location: "{{ reg }}"
+    environment: "staging"
+    vmss_instances: "{{ ins }}"
+    machine_type: "{{ mach }}"

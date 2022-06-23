@@ -1,0 +1,6 @@
+location = "{{ terraform['%s' | format(env)].location }}"
+environment = "{{ terraform['%s' | format(env)].environment }}"
+machine_type = "{{ terraform['%s' | format(env)].machine_type }}"
+vmss_instances = "{{ terraform['%s' | format(env)].vmss_instances }}"
+vmss_admin_username = "{{ terraform['%s' | format(env)].vmss_admin_username }}"
+vmss_admin_password = "{{ terraform['%s' | format(env)].vmss_admin_password }}"
