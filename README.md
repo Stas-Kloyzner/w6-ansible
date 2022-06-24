@@ -4,6 +4,15 @@
 This repo contins ansible code that runs terraform code that builds an infrastructure which is then configured by ansible to run a web app.
 
 the code was configured to create 2 possible environments : staging and production ,with production being the more powerful one with more numerous and stronger vm machines.
+# playbooks"
+1) deploy.yaml 
+- variables:
+a) env = staging/production
+b) operation = init/plan/apply/destroy
+c) user = < user_name >
+d) pass = < user_password >
+
+2) setup.yaml
 
 # Usage: 
 1) Update your machine and install python pip , guide: https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
@@ -21,11 +30,11 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
 - $ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=< user_name > -e pass=< user_password >
 - it will initialize terraform and its modules.
 
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=<user_name> -e pass=< user_password >
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=< user_name > -e pass=< user_password >
  
 - it will create a terraform plan.
 
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=<user_name> -e pass=<password>
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=< user_name > -e pass=<password>
  
 - it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
 
@@ -39,5 +48,5 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
 
 9) If you wish to destroy the environment you have built run the following command:
  
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=destroy -e user=<user_name> -e pass=< user_password >
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=destroy -e user=< user_name > -e pass=< user_password >
 
