@@ -1,15 +1,15 @@
-### w6-ansible
+# w6-ansible
 
 ## Description:
 This repo contins ansible code that runs terraform code that builds an infrastructure which is then configured by ansible to run a web app.
 
 the code was configured to create 2 possible environments : staging and production ,with production being the more powerful one with more numerous and stronger vm machines.
 
-## playbooks
+### playbooks
 
 1) deploy.yaml
 
-# variables:
+### variables:
 
 a) env = staging/production
 
