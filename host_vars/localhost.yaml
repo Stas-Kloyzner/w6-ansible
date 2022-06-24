@@ -5,7 +5,7 @@ terraform:
     location: "eastus"
     environment: "staging"
     vmss_instances: 3
-    machine_type: "Standard_B1s"
+    machine_type: "Standard_D2ads_v5"
 
   staging:
     vmss_admin_username: "{{ user }}"
