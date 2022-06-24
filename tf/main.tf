@@ -57,6 +57,8 @@ module "vm_scale_set" {
   load_balancer_inbound_nat_rules_ids = module.lb.load_balancer_inbound_nat_rules_ids
   admin_username = var.vmss_admin_username
   admin_password = var.vmss_admin_password
+  instances = var.vmss_instances
+  machine_type = var.machine_type
 
   depends_on = [module.pg_f_db]
 }
