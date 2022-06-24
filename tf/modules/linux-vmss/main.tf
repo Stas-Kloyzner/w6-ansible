@@ -49,21 +49,6 @@ resource "azurerm_network_interface" "nic" {
   }
 }
 
-#resource "azurerm_virtual_machine_scale_set_extension" "extension" {
-#  name                         = "custom-script"
-#  virtual_machine_scale_set_id = azurerm_linux_virtual_machine_scale_set.scaleset.id
-#  publisher                    = "Microsoft.Azure.Extensions"
-#  type                         = "CustomScript"
-#  type_handler_version         = "2.0"
-#  auto_upgrade_minor_version   = true
-#  settings = <<SETTINGS
-#    {
-#        "fileUris": ["https://scriptstore1234567.blob.core.windows.net/scripts/script.sh"],
-#          "commandToExecute": "bash script.sh"
-#    }
-#SETTINGS
-#}
-
 resource "azurerm_monitor_autoscale_setting" "scaling-setting" {
   name                = "scaling-setting"
   resource_group_name = azurerm_linux_virtual_machine_scale_set.scaleset.resource_group_name
@@ -75,7 +60,7 @@ resource "azurerm_monitor_autoscale_setting" "scaling-setting" {
 
     capacity {
       default = azurerm_linux_virtual_machine_scale_set.scaleset.instances
-      minimum = 1
+      minimum = azurerm_linux_virtual_machine_scale_set.scaleset.instances
       maximum = 10
     }
 
