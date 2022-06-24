@@ -37,7 +37,7 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
 - $ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=< user_name > -e pass=< user_password >
 - it will initialize terraform and its modules.
 
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=< user_name > -e pass=< user_password >
+> $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=< user_name > -e pass=< user_password >
  
 - it will create a terraform plan.
 
