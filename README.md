@@ -18,21 +18,26 @@ the code was configured to create 2 possible environments : staging and producti
 also you may edit other parameters in the host_vars/localhost.yaml file , and in the terraform files as well (tf/variables.tf)
  
 6) Use following commands ,note that you may write production instead of staging (-e env=production) to create the production environment instead of the staging one.
--$ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=<user_name> -e pass=<password>
--it will initialize terraform and its modules.
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=<user_name> -e pass=<password>
+- it will initialize terraform and its modules.
 
--$ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=<user_name> -e pass=<password>
--it will create a terraform plan.
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=<user_name> -e pass=<password>
+ 
+- it will create a terraform plan.
 
--$ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=<user_name> -e pass=<password>
--it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=<user_name> -e pass=<password>
+ 
+- it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
 
 7) A .env file was created inside w6-ansible folder based on your parameters and default values , in it you need to edit the Okta values ,which are missing, to enable authentication
 
 8) Run following command to install the weight tracker app (https://github.com/Stas-Kloyzner/bootcamp-app) on the vmss machines which were now created
--$ ansible-playbook setup.yaml 
-it will automatically create a hosts inventory and install the app on all the machines in it
+ 
+- $ ansible-playbook setup.yaml 
+ 
+- it will automatically create a hosts inventory and install the app on all the machines in it
 
 9) If you wish to destroy the environment you have built run the following command:
--$ ansible-playbook deploy.yaml -e env=staging -e operation=destroy -e user=<user_name> -e pass=<password>
+ 
+- $ ansible-playbook deploy.yaml -e env=staging -e operation=destroy -e user=<user_name> -e pass=<password>
 
