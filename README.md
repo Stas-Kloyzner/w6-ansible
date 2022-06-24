@@ -55,7 +55,7 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
  
 - it will automatically create a hosts inventory and install the app on all the machines in it
 
-9) If you wish to destroy the environment you have built run the following command:
+9) If you wish to destroy the environment you have built ,use  > -e operation=destroy < :
  
 > $ ansible-playbook deploy.yaml -e env=staging -e operation=destroy -e user=< user_name > -e pass=< user_password >
 
