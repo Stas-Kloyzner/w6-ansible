@@ -3,7 +3,7 @@ terraform:
     vmss_admin_username: "{{ user }}"
     vmss_admin_password: "{{ pass }}"
     location: "eastus"
-    environment: "staging"
+    environment: "production"
     vmss_instances: 3
     machine_type: "Standard_D2ads_v5"
 
