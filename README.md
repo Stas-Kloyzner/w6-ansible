@@ -7,7 +7,9 @@ the code was configured to create 2 possible environments : staging and producti
 
 ### playbooks
 
-### 1) deploy.yaml: variables:
+### 1) deploy.yaml : 
+
+variables:
 
 a) env = staging/production
 
@@ -17,7 +19,7 @@ c) user = < user_name >
 
 d) pass = < user_password >
 
-2) setup.yaml
+### 2) setup.yaml
 
 ## Usage: 
 1) Update your machine and install python pip , guide: https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
