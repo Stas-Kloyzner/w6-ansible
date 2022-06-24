@@ -47,7 +47,8 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
  
 - it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
 
- ## IMPORTANT : 7) A .env file was created inside w6-ansible folder based on your parameters and default values , in it you need to edit the Okta values ,which are missing, to enable authentication
+ ## IMPORTANT :
+ ### 7) A .env file was created inside w6-ansible folder based on your parameters and default values , in it you need to edit the Okta values ,which are missing, to enable authentication
 
 8) Run following command to install the weight tracker app (https://github.com/Stas-Kloyzner/bootcamp-app) on the vmss machines which were now created
  
