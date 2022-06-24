@@ -1,20 +1,27 @@
-## w6-ansible
+### w6-ansible
 
-# Description:
+## Description:
 This repo contins ansible code that runs terraform code that builds an infrastructure which is then configured by ansible to run a web app.
 
 the code was configured to create 2 possible environments : staging and production ,with production being the more powerful one with more numerous and stronger vm machines.
-# playbooks"
-1) deploy.yaml 
-- variables:
+
+## playbooks
+
+1) deploy.yaml
+
+# variables:
+
 a) env = staging/production
+
 b) operation = init/plan/apply/destroy
+
 c) user = < user_name >
+
 d) pass = < user_password >
 
 2) setup.yaml
 
-# Usage: 
+## Usage: 
 1) Update your machine and install python pip , guide: https://linuxize.com/post/how-to-install-pip-on-ubuntu-20.04/
 
 2) Install ansible and azure cli and configure them , guide: https://aster.cloud/2019/10/10/how-to-install-azure-pip-package-for-ansible/
