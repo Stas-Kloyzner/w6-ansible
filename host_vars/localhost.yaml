@@ -2,15 +2,15 @@ terraform:
   production:
     vmss_admin_username: "{{ user }}"
     vmss_admin_password: "{{ pass }}"
-    location: "{{ reg }}"
+    location: "eastus"
     environment: "staging"
-    vmss_instances: "{{ ins }}"
-    machine_type: "{{ mach }}"
+    vmss_instances: "3"
+    machine_type: "Standard_B1s"
 
   staging:
     vmss_admin_username: "{{ user }}"
     vmss_admin_password: "{{ pass }}"
-    location: "{{ reg }}"
+    location: "eastus"
     environment: "staging"
-    vmss_instances: "{{ ins }}"
-    machine_type: "{{ mach }}"
+    vmss_instances: "2"
+    machine_type: "Standard_B1s"
