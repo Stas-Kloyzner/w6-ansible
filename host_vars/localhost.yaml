@@ -4,7 +4,7 @@ terraform:
     vmss_admin_password: "{{ pass }}"
     location: "eastus"
     environment: "staging"
-    vmss_instances: "3"
+    vmss_instances: 3
     machine_type: "Standard_B1s"
 
   staging:
@@ -12,5 +12,5 @@ terraform:
     vmss_admin_password: "{{ pass }}"
     location: "eastus"
     environment: "staging"
-    vmss_instances: "2"
+    vmss_instances: 2
     machine_type: "Standard_B1s"
