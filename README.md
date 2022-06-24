@@ -7,9 +7,7 @@ the code was configured to create 2 possible environments : staging and producti
 
 ### playbooks
 
-1) deploy.yaml
-
-### variables:
+### 1) deploy.yaml: variables:
 
 a) env = staging/production
 
