@@ -1,6 +1,6 @@
 # db module main
 resource "azurerm_postgresql_flexible_server" "pgserver" {
-  name = "pg-f-server"
+  name = "${var.resource_group_name}-pg-f-server"
   resource_group_name    = var.resource_group_name
   location               = var.location
   version                = "13"
