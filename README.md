@@ -34,14 +34,16 @@ d) pass = < user_password >
 also you may edit other parameters in the host_vars/localhost.yaml file , and in the terraform files as well (tf/variables.tf)
  
 6) Use following commands ,note that you may write production instead of staging (-e env=production) to create the production environment instead of the staging one.
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=< user_name > -e pass=< user_password >
+ 
+>- $ ansible-playbook deploy.yaml -e env=staging -e operation=init -e user=< user_name > -e pass=< user_password >
+ 
 - it will initialize terraform and its modules.
 
-> $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=< user_name > -e pass=< user_password >
+>- $ ansible-playbook deploy.yaml -e env=staging -e operation=plan -e user=< user_name > -e pass=< user_password >
  
 - it will create a terraform plan.
 
-- $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=< user_name > -e pass=<password>
+> $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=< user_name > -e pass=<password>
  
 - it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
 
