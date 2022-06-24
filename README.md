@@ -54,7 +54,7 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
  
 > $ ansible-playbook setup.yaml 
  
-- it will automatically create a hosts inventory and install the app on all the machines in it
+- it will automatically create a hosts inventory and install the app on all the machines in it, it will also push the .env file into the machines .
 
 9) If you wish to destroy the environment you have built ,use   "-e operation=destroy" like so :  
  
