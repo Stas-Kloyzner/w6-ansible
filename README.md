@@ -42,7 +42,7 @@ also you may edit other parameters in the host_vars/localhost.yaml file , and in
  
 - it will create a terraform plan.
 
-> $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=< user_name > -e pass=<password>
+> $ ansible-playbook deploy.yaml -e env=staging -e operation=apply -e user=< user_name > -e pass=< user_password >
  
 - it will build the infrastructure according to plan, may take a long time ,around 15 minutes.
 
